@@ -1,8 +1,8 @@
 import React from 'react';
 import {Container, Grid} from '@material-ui/core';
 
-import { Cards, Chart, CountryPicker, Header} from './components';
-import styles from './App.module.css';
+import { Cards, Chart, CountryPicker, Header, Footer } from './components';
+// import styles from './App.module.css';
 
 import { fetchData } from './api';
 
@@ -42,6 +42,7 @@ class App extends React.Component {
             </Grid>
           </Container>
         </main>
+        <Footer />
       </React.Fragment>
     )
   }

@@ -1,6 +1,6 @@
 import React from 'react';
-import { AppBar, Toolbar, makeStyles, IconButton, Badge, Link } from '@material-ui/core';
-import  { Public }  from '@material-ui/icons';
+import { AppBar, Toolbar, makeStyles, Link } from '@material-ui/core';
+// import  { Public }  from '@material-ui/icons';
 import logo from '../../images/covid-19.svg';
 import styles from './Header.module.css'
 
