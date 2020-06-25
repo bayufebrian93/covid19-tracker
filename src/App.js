@@ -1,7 +1,9 @@
 import React from 'react';
-// import logo from './logo.svg';
-import { Cards, Chart, CountryPicker} from './components';
+import {Container, Grid} from '@material-ui/core';
+
+import { Cards, Chart, CountryPicker, Header} from './components';
 import styles from './App.module.css';
+
 import { fetchData } from './api';
 
 class App extends React.Component {
@@ -25,11 +27,22 @@ class App extends React.Component {
   render (){
     const { data, country } = this.state
     return (
-      <div className={styles.container}>
-        <Cards data={data} />
-        <CountryPicker handleCountryChange={this.handleCountryChange} />
-        <Chart data={data} country={country} />
-      </div>
+      <React.Fragment>
+        <Header />
+        <main>
+          <Container>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={3}>
+                <Cards data={data} />
+              </Grid>
+              <Grid item xs={12} md={9}>
+                <CountryPicker handleCountryChange={this.handleCountryChange} />
+                <Chart data={data} country={country} />
+              </Grid>
+            </Grid>
+          </Container>
+        </main>
+      </React.Fragment>
     )
   }
 }
